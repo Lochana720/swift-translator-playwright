@@ -1,38 +1,212 @@
-[
-  {
-    "id": "Pos_Fun_0001",
-    "type": "positive",
-    "input": "mama gedhara inna",
-    "expected": "මම ගෙදර ඉන්නා"
-  },
-  {
-    "id": "Pos_Fun_0002",
-    "type": "positive",
-    "input": "karunaakaralaa mata help ekak karanna puluvandha?",
-    "expected": "කරුණාකරලා මට help එකක් කරන්න පුළුවන්ද?"
-  },
-  {
-    "id": "Neg_Fun_0001",
-    "type": "negative",
-    "input": "mm gdr ynwa",
-    "expected": "Incorrect"
-  },
-  {
-    "id": "Neg_Fun_0002",
-    "type": "negative",
-    "input": "@@@###",
-    "expected": "No meaningful output"
-  },
-  {
-    "id": "Neg_Fun_0003",
-    "type": "negative",
-    "input": "mama 😊 gedhara",
-    "expected": "Partial output"
-  },
-  {
-    "id": "Pos_UI_0001",
-    "type": "ui",
-    "input": "mama gedhara yanavaa",
-    "expected": "මම ගෙදර යනවා"
-  }
-]
+{
+  "testCases": [
+    {
+      "tcId": "Pos_Fun_0001",
+      "type": "positive",
+      "length": "S",
+      "input": "mama gedhara yanavaa",
+      "expected": "මම ගෙදර යනවා"
+    },
+    {
+      "tcId": "Pos_Fun_0002",
+      "type": "positive",
+      "length": "S",
+      "input": "oya kohomada",
+      "expected": "ඔයා කොහොමද"
+    },
+    {
+      "tcId": "Pos_Fun_0003",
+      "type": "positive",
+      "length": "S",
+      "input": "api school giya",
+      "expected": "අපි පාසල් ගියා"
+    },
+    {
+      "tcId": "Pos_Fun_0004",
+      "type": "positive",
+      "length": "S",
+      "input": "ehema hondada",
+      "expected": "එහෙම හොඳද"
+    },
+    {
+      "tcId": "Pos_Fun_0005",
+      "type": "positive",
+      "length": "M",
+      "input": "mama office yanavaa heta",
+      "expected": "මම හෙට ඔෆිස් යනවා"
+    },
+
+    {
+      "tcId": "Pos_UI_0001",
+      "type": "ui",
+      "length": "S",
+      "input": "mama gedhara yanavaa",
+      "expected": "Real-time Sinhala output appears"
+    },
+    {
+      "tcId": "Pos_UI_0002",
+      "type": "ui",
+      "length": "S",
+      "input": "oya hari lassanai",
+      "expected": "Text updates while typing"
+    },
+    {
+      "tcId": "Pos_UI_0003",
+      "type": "ui",
+      "length": "M",
+      "input": "api honda game ekak kelamu",
+      "expected": "No UI lag or freeze"
+    },
+    {
+      "tcId": "Pos_UI_0004",
+      "type": "ui",
+      "length": "S",
+      "input": "mama hari sathutui",
+      "expected": "Correct Sinhala with smooth UI"
+    },
+
+    {
+      "tcId": "Neg_Fun_0001",
+      "type": "negative",
+      "length": "S",
+      "input": "mm gdr ynwa",
+      "expected": "Incorrect Sinhala or error handling"
+    },
+    {
+      "tcId": "Neg_Fun_0002",
+      "type": "negative",
+      "length": "S",
+      "input": "@@@###",
+      "expected": "No meaningful output"
+    },
+    {
+      "tcId": "Neg_Fun_0003",
+      "type": "negative",
+      "length": "S",
+      "input": "mama 😊 gedhara",
+      "expected": "Partial conversion or ignore emoji"
+    },
+    {
+      "tcId": "Neg_Fun_0004",
+      "type": "negative",
+      "length": "S",
+      "input": "Please send email",
+      "expected": "No Sinhala conversion"
+    },
+    {
+      "tcId": "Neg_Fun_0005",
+      "type": "negative",
+      "length": "S",
+      "input": "mamageharayanneapiheta",
+      "expected": "Incorrect Sinhala"
+    },
+    {
+      "tcId": "Neg_Fun_0006",
+      "type": "negative",
+      "length": "S",
+      "input": "mama heta giyaa",
+      "expected": "Wrong tense output"
+    },
+    {
+      "tcId": "Neg_Fun_0007",
+      "type": "negative",
+      "length": "S",
+      "input": "123456",
+      "expected": "No conversion"
+    },
+    {
+      "tcId": "Neg_Fun_0008",
+      "type": "negative",
+      "length": "S",
+      "input": "",
+      "expected": "No output"
+    },
+    {
+      "tcId": "Neg_Fun_0009",
+      "type": "negative",
+      "length": "S",
+      "input": "mama        gedhara",
+      "expected": "Formatting issue or partial output"
+    },
+    {
+      "tcId": "Neg_Fun_0010",
+      "type": "negative",
+      "length": "M",
+      "input": "mama office yanavaa namuth",
+      "expected": "Incomplete sentence handling"
+    },
+
+    {
+      "tcId": "Neg_Fun_0011",
+      "type": "negative",
+      "length": "M",
+      "input": "api api api api",
+      "expected": "Repetition handling"
+    },
+    {
+      "tcId": "Neg_Fun_0012",
+      "type": "negative",
+      "length": "S",
+      "input": "!!!!!",
+      "expected": "No output"
+    },
+    {
+      "tcId": "Neg_Fun_0013",
+      "type": "negative",
+      "length": "M",
+      "input": "mama tomorrow gedhara yanavaa",
+      "expected": "Mixed language handling"
+    },
+    {
+      "tcId": "Neg_Fun_0014",
+      "type": "negative",
+      "length": "M",
+      "input": "mama gedhara yanavaa yanavaa yanavaa",
+      "expected": "Redundancy handling"
+    },
+    {
+      "tcId": "Neg_Fun_0015",
+      "type": "negative",
+      "length": "L",
+      "input": "mama gedhara yanavaa heta api okkoma gedhara innava namuth hari lassanai",
+      "expected": "Partial or incorrect conversion"
+    },
+
+    {
+      "tcId": "Edge_0001",
+      "type": "edge",
+      "length": "S",
+      "input": "amma",
+      "expected": "Single word conversion"
+    },
+    {
+      "tcId": "Edge_0002",
+      "type": "edge",
+      "length": "S",
+      "input": "a",
+      "expected": "No meaningful output"
+    },
+    {
+      "tcId": "Edge_0003",
+      "type": "edge",
+      "length": "M",
+      "input": "mama gedhara yanavaaaaaaaaa",
+      "expected": "Character overflow handling"
+    },
+    {
+      "tcId": "Edge_0004",
+      "type": "edge",
+      "length": "M",
+      "input": "mAma GeDhArA YaNaVaA",
+      "expected": "Case-insensitive handling"
+    },
+    {
+      "tcId": "Edge_0005",
+      "type": "edge",
+      "length": "L",
+      "input": "mama gedhara yanavaa api kaala kanne nidaganava heta aluth deyak karamu",
+      "expected": "Long sentence robustness"
+    }
+  ]
+}
+
