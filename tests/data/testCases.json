@@ -1,0 +1,38 @@
+[
+  {
+    "id": "Pos_Fun_0001",
+    "type": "positive",
+    "input": "mama gedhara inna",
+    "expected": "මම ගෙදර ඉන්නා"
+  },
+  {
+    "id": "Pos_Fun_0002",
+    "type": "positive",
+    "input": "karunaakaralaa mata help ekak karanna puluvandha?",
+    "expected": "කරුණාකරලා මට help එකක් කරන්න පුළුවන්ද?"
+  },
+  {
+    "id": "Neg_Fun_0001",
+    "type": "negative",
+    "input": "mm gdr ynwa",
+    "expected": "Incorrect"
+  },
+  {
+    "id": "Neg_Fun_0002",
+    "type": "negative",
+    "input": "@@@###",
+    "expected": "No meaningful output"
+  },
+  {
+    "id": "Neg_Fun_0003",
+    "type": "negative",
+    "input": "mama 😊 gedhara",
+    "expected": "Partial output"
+  },
+  {
+    "id": "Pos_UI_0001",
+    "type": "ui",
+    "input": "mama gedhara yanavaa",
+    "expected": "මම ගෙදර යනවා"
+  }
+]
